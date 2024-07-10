@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --color-pagina: #f0fff0;
+    --color-letra: #696969;
+    --color-condiciones: #969696;
+    --color-button-encriptar: #61b886;
+    --color-button-desencriptar: #93e9b8;
+    --color-text-buttons: #f6f6f6;
+    --color-texto-desencriptado: #000000;
+
+    --fuente-inter: "Inter", sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.pagina_principal {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color-pagina);
+}
+
+.pagina_principal img {
+    position: absolute;
+    top: 35px;
+    left: 35px;
+    width: 35px;
+    height: auto;
+    max-width: 100%;
+}
+
+.texto_encriptar {
+    margin: 20px;
+}
+
+.texto {
+    position: absolute;
+    width: 42%;
+    height: 60%;
+    left: 12%;
+    top: 15%;
+    border: none;
+    font-family: var(--fuente-inter);
+    font-style: normal;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 150%;
+    background-color: var(--color-pagina);
+}
+
+.texto::placeholder {
+    color: var(--color-letra);
+}
+
+.texto:focus,
+.texto:active {
+    border: none;
+    outline: none;
+}
+
+.condiciones {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    padding: 0px;
+    gap: 8px;
+    align-items: center;
+    width: 80%;
+    left: 12%;
+    top: 80%;
+}
+
+.condiciones p {
+    font-family: var(--fuente-inter);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--color-condiciones);
+    line-height: 150%;
+    flex: none;
+    flex-grow: 0;
+}
+
+.button {
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 1% 0;
+    width: 80%;
+    left: 12%;
+    top: 85%;
+    gap: 10px;
+}
+
+.button__encriptar,
+.button__desencriptar,
+.button__copiar {
+    max-width: 328px;
+    min-width: 160px;
+    height: 67px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    gap: 8px;
+    width: 40%;
+    border-radius: 24px;
+    font-family: var(--fuente-inter);
+    font-size: 16px;
+    line-height: 15px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
+
+.button__encriptar {
+    background-color: var(--color-button-encriptar);
+    color: var(--color-text-buttons);
+}
+
+.button__desencriptar {
+    background-color: var(--color-button-desencriptar);
+    color: var(--color-text-buttons);
+}
+
+.button__encriptar:hover,
+.button__desencriptar:hover {
+    margin: 0.3%;
+    width: 24%;
+    padding: 2%;
+}
+
+.texto_desencriptar.ajustar {
+    justify-content: space-between;
+}
+
+.texto_desencriptar {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 30%;
+    height: 90%;
+    left: 60%;
+    top: 5%;
+    background-color: var(--color-text-buttons);
+    box-shadow: 0px 24px 32px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 32px;
+}
+
+.texto_desencriptado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+    gap: 16px;
+    position: absolute;
+    width: 100%;
+    top: 70%;
+    text-align: center;
+}
+
+.texto_desencriptado .parrafo__1 {
+    width: 70%;
+    font-style: normal;
+    font-family: var(--fuente-inter);
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    line-height: 120%;
+    color: var(--color-texto-desencriptado);
+}
+
+.texto_desencriptado .parrafo__2 {
+    width: 80%;
+    font-family: var(--fuente-inter);
+    font-size: 16px;
+    text-align: center;
+    line-height: 150%;
+    color: var(--color-letra);
+}
+
+.parrafo__1.ajustar {
+    height: 70%;
+}
+
+.texto_desencriptar img {
+    position: absolute;
+    width: 70%;
+    height: 40%;
+    top: 25%;
+}
+
+.button__copiar {
+    background-color: var(--color-button-encriptar);
+    color: var(--color-text-buttons);
+}
+
+.oculto {
+    display: none;
+}
+
+/* Responsive Telefono */
+@media (max-width: 600px) {
+    .pagina_principal {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .pagina_principal img {
+        width: 30px;
+    }
+
+    .texto_encriptar {
+        width: 100%;
+    }
+
+    .texto {
+        width: 80%;
+        height: 60%;
+        left: 10%;
+        top: 5%;
+    }
+
+    .condiciones {
+        width: 80%;
+        left: 10%;
+        top: 67%;
+    }
+
+    .condiciones p {
+        font-size: 16px;
+    }
+
+    .button {
+        width: 90%;
+        left: 10%;
+        top: 70%;
+    }
+
+    .button__encriptar,
+    .button__desencriptar {
+        width: 40%;
+        border-radius: 16px;
+    }
+
+    .button__encriptar:hover,
+    .button__desencriptar:hover {
+        margin: 0.3%;
+        width: 38%;
+        padding: 2%;
+    }
+
+    .texto_desencriptar {
+        width: 85%;
+        height: 10%;
+        left: 5%;
+        top: 85%;
+    }
+
+    .texto_desencriptado {
+        width: 100%;
+        top: 5%;
+    }
+
+    .texto_desencriptar img {
+        top: 0;
+        display: none;
+        visibility: hidden;
+    }
+}
